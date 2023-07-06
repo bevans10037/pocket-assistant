@@ -2,8 +2,11 @@
 ## Sorting tools for Analogue Pocket
 
 ### Prerequisites
+- Python 3, from https://www.python.org/
+- The Python library Pillow, from https://pillow.readthedocs.io/en/stable/installation.html
 - The pocker_updater.exe utility from https://github.com/mattpannella/pocket-updater-utility/releases, to be placed in Updater, the same folder as this program
-- The image processor, downloaded from https://github.com/agg23/Analogue-Pocket-Image-Process/tree/master, to be placed in Updater/_assistantimages/Analogue-Pocket-Image-Process-master - note: this requires a node.js installation from https://nodejs.org/en/download
+- The image processor, downloaded from https://github.com/agg23/Analogue-Pocket-Image-Process/tree/master, to be placed in Updater/_assistantimages/Analogue-Pocket-Image-Process-master
+  - Note: this also requires a node.js installation from https://nodejs.org/en/download
 
 ### Features
 - Asset cleaning: When you download or update a core that comes with JSON files, this will hide the JSONs you don't want automatically, and rename the ones you do to anything you like. For example, although the jtaliens core may specify that the primary version of Crime Fighters is the "Crime Fighters (World 2 players)" JSON file, and this program can instead move that JSON to a separate folder for unused games, then take the "Crime Fighters (US 4 players)" json from the "_alternatives" folder, and rename it to "Crime Fighters" in the main folder. It will even repeat this every time the core gets updated!
