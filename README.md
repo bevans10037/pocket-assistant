@@ -1,9 +1,11 @@
 # Pocket Assistant! :)
 ## Sorting tools for Analogue Pocket
 
+This is a program I've written to help me clean up my own Analogue Pocket's SD card. It can do a few different jobs that I think are useful (see the Features section below), and I hope you find at least one of them useful too!
+
 ### Guide
 - Download Updater/pocket_assistant.py, and place it on your Analogue Pocket's SD card (also in a folder called Updater).
-- Ensure all prerequisites are also downloaded and, if applicable, in the right place (see below).
+- Ensure all prerequisites are also downloaded and, if applicable, in the right place (see the Prerequisites section below).
 - (Optional) You can also download the update.bat file, which will automatically run pocket_updater.exe and pocket_assistant.py for you - put this on the root of the SD card!
 
 ### Prerequisites
