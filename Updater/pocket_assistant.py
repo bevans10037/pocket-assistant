@@ -6,16 +6,19 @@ import json
 import sys
 
 class OpenJSON:
-    def __init__(self,filename,encodeAsUTF8 = False):
+    def __init__(self,filename,encodeAsUTF8 = False,dictionary = False):
         self.filename = filename
         self.isUTF8 = encodeAsUTF8
-        if self.isUTF8:
-            fileToRead = open(self.filename,"r",encoding="utf8")
+        if dictionary:
+            self.dictionary = dictionary
         else:
-            fileToRead = open(self.filename,"r")
-        readFile = fileToRead.read()
-        self.dictionary = json.loads(readFile)
-        fileToRead.close()
+            if self.isUTF8:
+                fileToRead = open(self.filename,"r",encoding="utf8")
+            else:
+                fileToRead = open(self.filename,"r")
+            readFile = fileToRead.read()
+            self.dictionary = json.loads(readFile)
+            fileToRead.close()
     def save(self):
         if self.isUTF8:
             f = open(self.filename,"w",encoding="utf8")
@@ -133,7 +136,7 @@ def setup_data(dataToReplaceWith):
     global assistantData
     if not exists("assistant_data.json"):
         #First, inherit the base data, then ask the user if they want the program to do each of the things it can do!
-        assistantData.dictionary = dataToReplaceWith
+        assistantData = OpenJSON("assistant_data.json", dictionary = dataToReplaceWith)
 
         assistantData.dictionary["programSettings"]["clean"] = yes_no_input("Would you like this program to clean your assets? That is, when you download or update a core that comes with JSON files, this will hide the JSONs you don't want automatically. (y/n)")
         if assistantData.dictionary["programSettings"]["clean"]:
@@ -514,10 +517,8 @@ def clone_cores():
                             move("../Presets/" + x + "/Interact/" + assistantData.dictionary["jsonNames"][x]["rootfolder"] + "/" + x + "/" + directory[y], "../Presets/clones" + x[x.find("."):] + str(y+1) + "/Interact/" + assistantData.dictionary["jsonNames"][x]["rootfolder"] + str(y+1) + "/clones" + x[x.find("."):] + str(y+1) + "/" + directory[y])
                         
                         #Then create platform data - reuse the name of the json for the name of the core, and the category, publisher and year of release from the original
-                        newPlatformData = {"platform": {"category":platformData.dictionary["platform"]["category"],"name":directory[y][0:directory[y].rfind(".")],"year":platformData.dictionary["platform"]["year"],"manufacturer":platformData.dictionary["platform"]["manufacturer"]}}
-                        npd = open("../Platforms/" + x[x.find(".")+1:] + str(y+1) + ".json", "w", encoding="utf8")
-                        json.dump(newPlatformData, npd, indent=4)
-                        npd.close()
+                        newPlatformData = OpenJSON("../Platforms/" + x[x.find(".")+1:] + str(y+1) + ".json", encodeAsUTF8 = True, dictionary = {"platform": {"category":platformData.dictionary["platform"]["category"],"name":directory[y][0:directory[y].rfind(".")],"year":platformData.dictionary["platform"]["year"],"manufacturer":platformData.dictionary["platform"]["manufacturer"]}})
+                        newPlatformData.save()
 
 #INTEGER SCALE CORES
 def integer_scale():
