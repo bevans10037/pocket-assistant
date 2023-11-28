@@ -956,7 +956,9 @@ def main():
                                                 scalerMode = videoJSON.dictionary["video"]["scaler_modes"][int(modeNum) - 1]
                                                 aspectHeight = input("What would you like the aspect ratio height to be?")
                                                 aspectWidth = input("What would you like the aspect ratio width to be?")
-                                                assistantData.dictionary["aspectData"]["useCustomRatio"][action] = {"aspect_h": aspectHeight, "aspect_w": aspectWidth, "height": scalerMode["height"], "width": scalerMode["width"]}
+                                                if not action in assistantData.dictionary["aspectData"]["useCustomRatio"].keys():
+                                                    assistantData.dictionary["aspectData"]["useCustomRatio"][action] = []
+                                                assistantData.dictionary["aspectData"]["useCustomRatio"][action].append({"aspect_h": int(aspectHeight), "aspect_w": int(aspectWidth), "height": scalerMode["height"], "width": scalerMode["width"]})
                                             except ValueError or KeyError:
                                                 print("That's not one of the options... Please try again!")
                                                 system("pause")
