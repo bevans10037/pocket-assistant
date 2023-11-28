@@ -7,6 +7,7 @@ This is a program I've written to help me clean up my own Analogue Pocket's SD c
 - Download Updater/pocket_assistant.py, and place it on your Analogue Pocket's SD card (also in a folder called Updater).
 - Ensure all prerequisites are also downloaded and, if applicable, in the right place (see the Prerequisites section below).
 - (Optional) You can also download the update.bat file, which will automatically run pocket_updater.exe and pocket_assistant.py for you - put this on the root of the SD card! If you do this, you should also download the pocket_update_settings.json - this will just tell pocket_updater.exe not to download assets as part of "update all", so the batch file can first download all cores, second run pocket_assistant and clean any assets you like, and finally download all the assets separately.
+- (Optional) To simplify the process even further, you can also download my pre-made Updater/assistant_data.json file, which will give all arcade games (save for CPS1, CPS2, CPS1.5 and Neo Geo games) their own core, that autostarts where possible.
 
 ### Prerequisites
 - Python 3, from https://www.python.org/
