@@ -1,0 +1,993 @@
+{
+    "altCoreData": {
+    },
+    "aspectData": {
+        "rotateBy180": [
+            "Elevator Action",
+            "Jungle King",
+            "Pirate Pete"
+        ],
+        "rotateBy270": [
+            "Arkanoid - Revenge of DOH",
+            "Block Block",
+            "Extermination",
+            "Get Star",
+            "Wonder Planet",
+            "Ace Attacker",
+            "Action Fighter",
+            "Bio-Attack",
+            "Major League",
+            "Passing Shot",
+            "Sonic Boom",
+            "Time Scanner",
+            "Water Ski",
+            "Wrestle War"
+        ],
+        "rotateBy90": [
+            "Contra",
+            "Gun Smoke",
+            "Mikie",
+            "Road Fighter",
+            "Roc'n Rope",
+            "Shao-lin's Road",
+            "Super Basketball",
+            "Vulgus",
+            "Dr. Toppel's Adventure",
+            "Kageki",
+            "Legendary Wings",
+            "Savage Bees",
+            "Super Contra",
+            "Space Cruiser",
+            "Wild Western",
+            "High Way Race"
+        ],
+        "useCustomRatio": {
+            "Spiritualized.7800": [
+                {
+                    "aspect_h": 21,
+                    "aspect_w": 25,
+                    "height": 224,
+                    "width": 320
+                }
+            ],
+            "Spiritualized.Arcadia": [
+                {
+                    "aspect_h": 108,
+                    "aspect_w": 128,
+                    "height": 216,
+                    "width": 128
+                }
+            ],
+            "Spiritualized.ChannelF": [
+                {
+                    "aspect_h": 234,
+                    "aspect_w": 400,
+                    "height": 234,
+                    "width": 100
+                }
+            ],
+            "Spiritualized.GG": [
+                {
+                    "aspect_h": 63,
+                    "aspect_w": 80,
+                    "height": 144,
+                    "width": 160
+                }
+            ],
+            "Spiritualized.SMS": [
+                {
+                    "aspect_h": 5,
+                    "aspect_w": 8,
+                    "height": 192,
+                    "width": 256
+                }
+            ],
+            "agg23.PC Engine": [
+                {
+                    "aspect_h": 240,
+                    "aspect_w": 256,
+                    "height": 240,
+                    "width": 512
+                },
+                {
+                    "aspect_h": 224,
+                    "aspect_w": 256,
+                    "height": 224,
+                    "width": 512
+                }
+            ],
+            "jotego.jtcps2": [
+                {
+                    "aspect_h": 133,
+                    "aspect_w": 176,
+                    "height": 224,
+                    "width": 384
+                }
+            ]
+        },
+        "useOriginalRatio": [
+            "Spiritualized.VideoBrain",
+            "agg23.SNES",
+            "boogermann.supervision",
+            "Spiritualized.Adventurevision",
+            "Mazamars312.Amiga",
+            "ericlewis.SuperBreakout",
+            "jotego.jtcps1",
+            "jotego.jtcps15"
+        ]
+    },
+    "autostartData": {
+        "skip": [
+            "Silkworm",
+            "Super Xevious",
+            "Alpine Ski",
+            "High Way Race",
+            "Jungle King",
+            "Pirate Pete",
+            "Space Seeker",
+            "Wild Western",
+            "Gemini Wing"
+        ]
+    },
+    "cleanData": {
+        "cores": {
+            "Mazamars312.NeoGeo": {
+                "expectedNewJSONs": 249,
+                "jsonList": {
+                    "Aero Fighters 2": "Aero Fighters 2",
+                    "Art of Fighting": "Art of Fighting",
+                    "Blazing Star": "Blazing Star",
+                    "Burning Fight": "Burning Fight",
+                    "Crossed Swords": "Crossed Swords",
+                    "Cyber-Lip": "Cyber-Lip",
+                    "Double Dragon": "Double Dragon",
+                    "Fatal Fury Special": "Fatal Fury Special",
+                    "Garou - Mark of the Wolves": "Garou - Mark of the Wolves",
+                    "King of Fighters '94, The": "The King of Fighters '94",
+                    "King of Fighters '95, The": "The King of Fighters '95",
+                    "King of Fighters '98, The - The Slugfest": "The King of Fighters '98 - The Slugfest",
+                    "League Bowling": "League Bowling",
+                    "Magical Drop III": "Magical Drop III",
+                    "Magician Lord": "Magician Lord",
+                    "Metal Slug": "Metal Slug",
+                    "Metal Slug X": "Metal Slug X",
+                    "Mutation Nation": "Mutation Nation",
+                    "NAM-1975": "NAM-1975",
+                    "Neo Bomberman": "Neo Bomberman",
+                    "Neo Drift Out New Technology": "Neo Drift Out - New Technology",
+                    "Ninja Commando": "Ninja Commando",
+                    "Power Instinct Matrimelee": "Matrimelee - Neo Power Instinct",
+                    "Prehistoric Isle 2": "Prehistoric Isle 2",
+                    "Pulstar": "Pulstar",
+                    "Puzzled": "Puzzled",
+                    "SNK vs. Capcom Plus": "SNK vs. Capcom Plus",
+                    "Samurai Shodown II": "Samurai Shodown II",
+                    "Shock Troopers": "Shock Troopers",
+                    "Top Hunter": "Top Hunter",
+                    "Viewpoint": "Viewpoint",
+                    "Waku Waku 7": "Waku Waku 7",
+                    "Windjammers": "Windjammers",
+                    "Xeno Crisis": "Xeno Crisis",
+                    "Zed Blade": "Zed Blade",
+                    "Zupapa!": "Zupapa!"
+                },
+                "rootfolder": "ng"
+            },
+            "Mazamars312.NeoGeo_Overdrive": {
+                "expectedNewJSONs": 249,
+                "jsonList": {
+                    "Aero Fighters 2": "Aero Fighters 2",
+                    "Art of Fighting": "Art of Fighting",
+                    "Blazing Star": "Blazing Star",
+                    "Burning Fight": "Burning Fight",
+                    "Crossed Swords": "Crossed Swords",
+                    "Cyber-Lip": "Cyber-Lip",
+                    "Double Dragon": "Double Dragon",
+                    "Fatal Fury Special": "Fatal Fury Special",
+                    "Garou - Mark of the Wolves": "Garou - Mark of the Wolves",
+                    "King of Fighters '94, The": "The King of Fighters '94",
+                    "King of Fighters '95, The": "The King of Fighters '95",
+                    "King of Fighters '98, The - The Slugfest": "The King of Fighters '98 - The Slugfest",
+                    "League Bowling": "League Bowling",
+                    "Magical Drop III": "Magical Drop III",
+                    "Magician Lord": "Magician Lord",
+                    "Metal Slug": "Metal Slug",
+                    "Metal Slug X": "Metal Slug X",
+                    "Mutation Nation": "Mutation Nation",
+                    "NAM-1975": "NAM-1975",
+                    "Neo Bomberman": "Neo Bomberman",
+                    "Neo Drift Out New Technology": "Neo Drift Out - New Technology",
+                    "Ninja Commando": "Ninja Commando",
+                    "Power Instinct Matrimelee": "Matrimelee - Neo Power Instinct",
+                    "Prehistoric Isle 2": "Prehistoric Isle 2",
+                    "Pulstar": "Pulstar",
+                    "Puzzled": "Puzzled",
+                    "SNK vs. Capcom Plus": "SNK vs. Capcom Plus",
+                    "Samurai Shodown II": "Samurai Shodown II",
+                    "Shock Troopers": "Shock Troopers",
+                    "Top Hunter": "Top Hunter",
+                    "Viewpoint": "Viewpoint",
+                    "Waku Waku 7": "Waku Waku 7",
+                    "Windjammers": "Windjammers",
+                    "Xeno Crisis": "Xeno Crisis",
+                    "Zed Blade": "Zed Blade",
+                    "Zupapa!": "Zupapa!"
+                },
+                "rootfolder": "ng"
+            },
+            "RndMnkIII.alphamission": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Alpha Mission": "Alpha Mission"
+                },
+                "rootfolder": "alphamission"
+            },
+            "antongale.exerion": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "Exerion (Taito)": "Exerion"
+                },
+                "rootfolder": "exerion"
+            },
+            "antongale.performan": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Performan (US)": "Performan"
+                },
+                "rootfolder": "performan"
+            },
+            "antongale.slapfight": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Get Star (Bootleg)": "Get Star",
+                    "SlapFight (Bootleg)": "Slap Fight",
+                    "Tiger Heli (Bootleg)": "Tiger Heli"
+                },
+                "rootfolder": "slapfight"
+            },
+            "antongale.taitosj": {
+                "expectedNewJSONs": 11,
+                "jsonList": {
+                    "Alpine Ski": "Alpine Ski",
+                    "Bio Attack": "Bio-Attack",
+                    "Elevator Action (bootleg)": "Elevator Action",
+                    "High Way Race": "High Way Race",
+                    "Jungle King": "Jungle King",
+                    "Pirate Pete": "Pirate Pete",
+                    "Space Cruiser": "Space Cruiser",
+                    "Space Seeker": "Space Seeker",
+                    "Time Tunnel": "Time Tunnel",
+                    "Water Ski": "Water Ski",
+                    "Wild Western": "Wild Western"
+                },
+                "rootfolder": "taitosj"
+            },
+            "atrac17.pipibibs": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "pipibibs": "Pipi & Bibi's"
+                },
+                "rootfolder": "pipibibs"
+            },
+            "atrac17.truxton2": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "truxton2": "Truxton II"
+                },
+                "rootfolder": "truxton2"
+            },
+            "boogermann.bankpanic": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Bank Panic": "Bank Panic",
+                    "Combat Hawk": "Combat Hawk"
+                },
+                "rootfolder": "bankpanic"
+            },
+            "boogermann.congo": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Congo Bongo (Rev C)": "Congo Bongo"
+                },
+                "rootfolder": "congo"
+            },
+            "boogermann.digdug": {
+                "expectedNewJSONs": 5,
+                "jsonList": {
+                    "Dig Dug (Rev 2)": "Dig Dug"
+                },
+                "rootfolder": "digdug"
+            },
+            "boogermann.galaga": {
+                "expectedNewJSONs": 15,
+                "jsonList": {
+                    "Galaga (Namco)": "Galaga"
+                },
+                "rootfolder": "galaga"
+            },
+            "boogermann.gberet": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Green Beret": "Green Beret",
+                    "Mr. Goemon": "Mr. Goemon",
+                    "Rush'n Attack": "Rush'n Attack"
+                },
+                "rootfolder": "gberet"
+            },
+            "boogermann.pooyan": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Pooyan": "Pooyan"
+                },
+                "rootfolder": "pooyan"
+            },
+            "boogermann.xevious": {
+                "expectedNewJSONs": 10,
+                "jsonList": {
+                    "Super Xevious": "Super Xevious",
+                    "Xevious": "Xevious"
+                },
+                "rootfolder": "xevious"
+            },
+            "jotego.jtaliens": {
+                "expectedNewJSONs": 21,
+                "jsonList": {
+                    "Aliens (World set 1)": "Aliens",
+                    "Crime Fighters (US 4 Players)": "Crime Fighters",
+                    "Gang Busters (set 1)": "Gang Busters",
+                    "Super Contra (set 1)": "Super Contra",
+                    "Thunder Cross (set 1)": "Thunder Cross"
+                },
+                "rootfolder": "jtaliens"
+            },
+            "jotego.jtbtiger": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Black Tiger": "Black Tiger"
+                },
+                "rootfolder": "jtbtiger"
+            },
+            "jotego.jtbubl": {
+                "expectedNewJSONs": 8,
+                "jsonList": {
+                    "Bubble Bobble (US, Ver 5.1)": "Bubble Bobble",
+                    "Bubble Bobble Lost Cave V1.2": "Bubble Bobble - Lost Cave",
+                    "Tokio - Scramble Formation (bootleg)": "Tokio - Scramble Formation"
+                },
+                "rootfolder": "jtbubl"
+            },
+            "jotego.jtcastle": {
+                "expectedNewJSONs": 5,
+                "jsonList": {
+                    "Haunted Castle (version E)": "Haunted Castle"
+                },
+                "rootfolder": "jtcastle"
+            },
+            "jotego.jtcomsc": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Combat School (joystick)": "Combat School"
+                },
+                "rootfolder": "jtcomsc"
+            },
+            "jotego.jtcontra": {
+                "expectedNewJSONs": 7,
+                "jsonList": {
+                    "Contra (US - Asia, set 1)": "Contra"
+                },
+                "rootfolder": "jtcontra"
+            },
+            "jotego.jtcop": {
+                "expectedNewJSONs": 10,
+                "jsonList": {
+                    "Hippodrome (US)": "Hippodrome",
+                    "Robocop (World revision 3)": "Robocop"
+                },
+                "rootfolder": "jtcop"
+            },
+            "jotego.jtcps1": {
+                "expectedNewJSONs": 142,
+                "jsonList": {
+                    "1941 Counter Attack (World 900227)": "1941 - Counter Attack",
+                    "Adventure Quiz Capcom World 2 (Japan 920611)": "Adventure Quiz - Capcom World 2",
+                    "Captain Commando (World 911014)": "Captain Commando",
+                    "Carrier Air Wing (World 901009)": "Carrier Air Wing",
+                    "Dynasty Wars (USA, B-Board 89624B-)": "Dynasty Wars",
+                    "Final Fight (World, set 1)": "Final Fight",
+                    "Forgotten Worlds (World)": "Forgotten Worlds",
+                    "Ganbare! Marine Kun (Japan 2K0411)": "Ganbare! Marine Kun",
+                    "Ghouls'n Ghosts (World)": "Ghouls'n Ghosts",
+                    "Gulun.Pa! (Japan 931220 L) (prototype)": "Gulun.Pa!",
+                    "Knights of the Round (World 911127)": "Knights of the Round",
+                    "Magic Sword Heroic Fantasy (World 900623)": "Magic Sword - Heroic Fantasy",
+                    "Mega Man The Power Battle (CPS1, USA 951006)": "Mega Man - The Power Battle",
+                    "Mega Twins (World 900619)": "Mega Twins",
+                    "Mercs (World 900302)": "Mercs",
+                    "Nemo (World 901109)": "Nemo",
+                    "Pang! 3 (Euro 950511)": "Pang! 3",
+                    "Pnickies (Japan 940608)": "Pnickies",
+                    "Pokonyan! Balloon (Japan 940322)": "Pokonyan! Balloon",
+                    "Quiz & Dragons Capcom Quiz Game (USA 920701)": "Quiz & Dragons - Capcom Quiz Game",
+                    "Quiz Tonosama no Yabou 2 Zenkoku-ban (Japan 950123)": "Quiz Tonosama no Yabou 2 - Zenkoku-ban",
+                    "Street Fighter Alpha Warriors' Dreams (CPS Changer, Publicity USA 950727)": "Street Fighter Alpha - Warriors' Dreams",
+                    "Street Fighter II The World Warrior (World 910129)": "Street Fighter II - The World Warrior",
+                    "Street Fighter II' Champion Edition (World 920313)": "Street Fighter II - Champion Edition",
+                    "Street Fighter II' Hyper Fighting (World 921209)": "Street Fighter II - Hyper Fighting",
+                    "Street Fighter II' Turbo Hyper Fighting (Japan 921209)": "Street Fighter II - Turbo Hyper Fighting",
+                    "Strider (USA, B-Board 89624B-2)": "Strider",
+                    "The King of Dragons (World 910711)": "The King of Dragons",
+                    "Three Wonders (World 910513)": "Three Wonders",
+                    "U.N. Squadron (USA)": "U.N. Squadron",
+                    "Varth Operation Thunderstorm (World 920612)": "Varth - Operation Thunderstorm",
+                    "Willow (World)": "Willow"
+                },
+                "rootfolder": "cps1"
+            },
+            "jotego.jtcps15": {
+                "expectedNewJSONs": 19,
+                "jsonList": {
+                    "Cadillacs and Dinosaurs (World 930201)": "Cadillacs and Dinosaurs",
+                    "Muscle Bomber Duo Ultimate Team Battle (World 931206)": "Muscle Bomber Duo - Ultimate Team Battle",
+                    "Saturday Night Slam Masters (World 930713)": "Saturday Night Slam Masters",
+                    "The Punisher (World 930422)": "The Punisher",
+                    "Warriors of Fate (World 921002)": "Warriors of Fate"
+                },
+                "rootfolder": "cps15"
+            },
+            "jotego.jtcps2": {
+                "expectedNewJSONs": 316,
+                "jsonList": {
+                    "1944 The Loop Master (Euro 000620)": "1944 - The Loop Master",
+                    "19XX The War Against Destiny (Euro 960104)": "19XX - The War Against Destiny",
+                    "Alien vs. Predator (Euro 940520)": "Alien vs. Predator",
+                    "Armored Warriors (Euro 941011)": "Armored Warriors",
+                    "Battle Circuit (Euro 970319)": "Battle Circuit",
+                    "Capcom Sports Club (Euro 970722)": "Capcom Sports Club",
+                    "Cyberbots Fullmetal Madness (Euro 950424)": "Cyberbots - Full Metal Madness",
+                    "Darkstalkers The Night Warriors (Euro 940705)": "Darkstalkers - The Night Warriors",
+                    "Dimahoo (Euro 000121)": "Dimahoo",
+                    "Dungeons & Dragons Shadow over Mystara (Euro 960208)": "Dungeons & Dragons - Shadow over Mystara",
+                    "Dungeons & Dragons Tower of Doom (Euro 940113)": "Dungeons & Dragons - Tower of Doom",
+                    "Eco Fighters (World 931203)": "Eco Fighters",
+                    "Giga Wing (USA 990222)": "Giga Wing",
+                    "Hyper Street Fighter II The Anniversary Edition (USA 040202)": "Hyper Street Fighter II - The Anniversary Edition",
+                    "Janpai Puzzle Choukou (Japan 010820)": "Janpai Puzzle Choukou",
+                    "Jyangokushi Haoh no Saihai (Japan 990527)": "Jyangokushi Haoh no Saihai",
+                    "Mars Matrix Hyper Solid Shooting (USA 000412)": "Mars Matrix - Hyper Solid Shooting",
+                    "Marvel Super Heroes (Euro 951024)": "Marvel Super Heroes",
+                    "Marvel Super Heroes Vs. Street Fighter (Euro 970625)": "Marvel Super Heroes Vs. Street Fighter",
+                    "Marvel Vs. Capcom Clash of Super Heroes (Euro 980112)": "Marvel Vs. Capcom - Clash of Super Heroes",
+                    "Mega Man 2 The Power Fighters (USA 960708)": "Mega Man 2 - The Power Fighters",
+                    "Mega Man The Power Battle (CPS2, USA 950925, SAMPLE Version)": "Mega Man - The Power Battle",
+                    "Mighty! Pang (Euro 000925)": "Mighty! Pang",
+                    "Night Warriors Darkstalkers' Revenge (Euro 950316)": "Night Warriors - Darkstalkers' Revenge",
+                    "Progear (USA 010117)": "Progear",
+                    "Puzz Loop 2 (Euro 010302)": "Puzz Loop 2",
+                    "Quiz Nanairo Dreams Nijiirochou no Kiseki (Japan 96086)": "Quiz Nanairo Dreams Nijiirochou no Kiseki",
+                    "Ring of Destruction Slammasters II (Euro 940902)": "Ring of Destruction - Slammasters II",
+                    "Street Fighter Alpha 2 (Euro 960229)": "Street Fighter Alpha 2",
+                    "Street Fighter Alpha 3 (Euro 980904)": "Street Fighter Alpha 3",
+                    "Street Fighter Alpha Warriors' Dreams (Euro 950605)": "Street Fighter Alpha - Warriors' Dreams",
+                    "Street Fighter Zero 2 Alpha (Japan 960805)": "Street Fighter Zero 2 Alpha",
+                    "Super Gem Fighter Mini Mix (USA 970904)": "Super Gem Fighter Mini Mix",
+                    "Super Puzzle Fighter II Turbo (Euro 960529)": "Super Puzzle Fighter II Turbo",
+                    "Super Street Fighter II The New Challengers (World 930911)": "Super Street Fighter II - The New Challengers",
+                    "Super Street Fighter II The Tournament Battle (World 930911)": "Super Street Fighter II - The Tournament Battle",
+                    "Super Street Fighter II Turbo (World 940223)": "Super Street Fighter II Turbo",
+                    "Vampire Hunter 2 Darkstalkers Revenge (Japan 970913)": "Vampire Hunter 2 - Darkstalkers Revenge",
+                    "Vampire Savior 2 The Lord of Vampire (Japan 970913)": "Vampire Savior 2 - The Lord of Vampire",
+                    "Vampire Savior The Lord of Vampire (Euro 970519)": "Vampire Savior - The Lord of Vampire",
+                    "X-Men Children of the Atom (Euro 950331)": "X-Men - Children of the Atom",
+                    "X-Men Vs. Street Fighter (Euro 960910)": "X-Men Vs. Street Fighter"
+                },
+                "rootfolder": "cps2"
+            },
+            "jotego.jtdd": {
+                "expectedNewJSONs": 6,
+                "jsonList": {
+                    "Double Dragon (World set 1)": "Double Dragon"
+                },
+                "rootfolder": "jtdd"
+            },
+            "jotego.jtdd2": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Double Dragon II The Revenge (World)": "Double Dragon II"
+                },
+                "rootfolder": "jtdd2"
+            },
+            "jotego.jtexed": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Exed Exes": "Exed Exes"
+                },
+                "rootfolder": "jtexed"
+            },
+            "jotego.jtfround": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "The Final Round (version M)": "The Final Round"
+                },
+                "rootfolder": "jtfround"
+            },
+            "jotego.jtgng": {
+                "expectedNewJSONs": 10,
+                "jsonList": {
+                    "Ghosts'n Goblins (World set 1)": "Ghosts'n Goblins"
+                },
+                "rootfolder": "jtgng"
+            },
+            "jotego.jtgunsmk": {
+                "expectedNewJSONs": 6,
+                "jsonList": {
+                    "Gun.Smoke (World, 1985-11-15)": "Gun.Smoke"
+                },
+                "rootfolder": "jtgunsmk"
+            },
+            "jotego.jtkarnov": {
+                "expectedNewJSONs": 7,
+                "jsonList": {
+                    "Chelnov - Atomic Runner (World)": "Chelnov - Atomic Runner",
+                    "Karnov (US, rev 5)": "Karnov",
+                    "Wonder Planet (Japan)": "Wonder Planet"
+                },
+                "rootfolder": "jtkarnov"
+            },
+            "jotego.jtkicker": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Shao-lin's Road (set 1)": "Shao-lin's Road"
+                },
+                "rootfolder": "jtkicker"
+            },
+            "jotego.jtkiwi": {
+                "expectedNewJSONs": 23,
+                "jsonList": {
+                    "Arkanoid - Revenge of DOH (World)": "Arkanoid - Revenge of DOH",
+                    "Dr. Toppel's Adventure (World)": "Dr. Toppel's Adventure",
+                    "Extermination (World)": "Extermination",
+                    "Insector X (World)": "Insector X",
+                    "Kageki (World)": "Kageki",
+                    "The NewZealand Story (World, unknown version) (P0-041A PCB)": "The NewZealand Story"
+                },
+                "rootfolder": "jtkiwi"
+            },
+            "jotego.jtkunio": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Renegade (US bootleg)": "Renegade"
+                },
+                "rootfolder": "jtkunio"
+            },
+            "jotego.jtmikie": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Mikie": "Mikie"
+                },
+                "rootfolder": "jtmikie"
+            },
+            "jotego.jtninja": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Bad Dudes vs. Dragonninja (US revision 1)": "Bad Dudes vs. Dragon Ninja",
+                    "Heavy Barrel (World)": "Heavy Barrel"
+                },
+                "rootfolder": "jtninja"
+            },
+            "jotego.jtoutrun": {
+                "expectedNewJSONs": 15,
+                "jsonList": {
+                    "Out Run (sitdown-upright, Rev B)": "OutRun",
+                    "Turbo Out Run (Out Run upgrade) (FD1094 317-0118)": "Turbo OutRun"
+                },
+                "rootfolder": "jtoutrun"
+            },
+            "jotego.jtpang": {
+                "expectedNewJSONs": 12,
+                "jsonList": {
+                    "Block Block (World 911219 Joystick)": "Block Block",
+                    "Capcom World (Japan)": "Capcom World",
+                    "Dokaben (Japan)": "Dokaben",
+                    "Pang (World)": "Pang",
+                    "Super Pang (World 900914)": "Super Pang"
+                },
+                "rootfolder": "jtpang"
+            },
+            "jotego.jtpinpon": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "Konami's Ping-Pong": "Konami's Ping-Pong"
+                },
+                "rootfolder": "jtpinpon"
+            },
+            "jotego.jtrastan": {
+                "expectedNewJSONs": 10,
+                "jsonList": {
+                    "Rastan (World Rev 1)": "Rastan"
+                },
+                "rootfolder": "jtrastan"
+            },
+            "jotego.jtroadf": {
+                "expectedNewJSONs": 5,
+                "jsonList": {
+                    "Road Fighter (set 1)": "Road Fighter"
+                },
+                "rootfolder": "jtroadf"
+            },
+            "jotego.jtroc": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Roc'n Rope": "Roc'n Rope"
+                },
+                "rootfolder": "jtroc"
+            },
+            "jotego.jts16": {
+                "expectedNewJSONs": 29,
+                "jsonList": {
+                    "Ace Attacker (Japan, System 16A, FD1094 317-0060)": "Ace Attacker",
+                    "Action Fighter (FD1089B 317-unknown, analog controls)": "Action Fighter",
+                    "Alex Kidd The Lost Stars (set 1, FD1089A 317-0021)": "Alex Kidd - The Lost Stars",
+                    "Fantasy Zone (317-5000)": "Fantasy Zone",
+                    "Major League": "Major League",
+                    "Quartet 2 (unprotected)": "Quartet 2",
+                    "SDI - Strategic Defense Initiative (Japan, newer, System 16A, FD1089B 317-0027)": "Strategic Defense Initiative",
+                    "Shinobi (set 1, System 16A) (FD1094 317-0050)": "Shinobi",
+                    "Tetris (set 3, Japan, System 16A) (FD1094 317-0093a)": "Tetris"
+                },
+                "rootfolder": "jts16"
+            },
+            "jotego.jts16b": {
+                "expectedNewJSONs": 79,
+                "jsonList": {
+                    "Alien Syndrome (set 3, System 16B, FD1089A 317-0033)": "Alien Syndrome",
+                    "Altered Beast (set 2) (MC-8123B 317-0066)": "Altered Beast",
+                    "Aurail (set 2, World) (FD1089B 317-0168)": "Aurail",
+                    "Bay Route (set 3, World) (FD1094 317-0116)": "Bay Route",
+                    "Bullet (FD1094 317-0041)": "Bullet",
+                    "Cotton (set 4, World) (FD1094 317-0181a)": "Cotton",
+                    "Dunk Shot (FD1089A 317-0022)": "Dunk Shot",
+                    "Dynamite Dux (set 1, World) (8751 317-0095)": "Dynamite Dux",
+                    "E-Swat - Cyber Police (set 4, World) (FD1094 317-0130)": "Cyber Police - E-Swat",
+                    "Excite League (FD1094 317-0079)": "Excite League",
+                    "Fantasy Zone II - The Tears of Opa-Opa (System 16C version)": "Fantasy Zone II",
+                    "Flash Point (set 1, Japan) (FD1094 317-0127A)": "Flash Point",
+                    "Golden Axe (set 1, World) (FD1094 317-0110)": "Golden Axe",
+                    "MVP (set 2, US) (FD1094 317-0143)": "MVP",
+                    "Passing Shot (World, 4 Players) (FD1094 317-0074)": "Passing Shot",
+                    "Riot City (Japan)": "Riot City",
+                    "RyuKyu (Japan) (FD1094 317-5023)": "Ryu Kyu",
+                    "Sonic Boom (FD1094 317-0053)": "Sonic Boom",
+                    "Sukeban Jansi Ryuko (set 2, System 16B, FD1089B 317-5021)": "Sukeban Jansi Ryuko",
+                    "Super League (FD1094 317-0045)": "Super League",
+                    "Time Scanner (set 2, System 16B)": "Time Scanner",
+                    "Toryumon": "Gateway to Success",
+                    "Tough Turf (set 1, US) (8751 317-0099)": "Tough Turf",
+                    "Wonder Boy III - Monster Lair (set 3, World, System 16B) (FD1094 317-0089)": "Wonder Boy III",
+                    "Wrestle War (set 2, World) (FD1094 317-0102)": "Wrestle War"
+                },
+                "rootfolder": "jts16b"
+            },
+            "jotego.jtsarms": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Side Arms - Hyper Dyne (World, 861129)": "Side Arms - Hyper Dyne"
+                },
+                "rootfolder": "jtsarms"
+            },
+            "jotego.jtsbaskt": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Super Basketball (version H, unprotected)": "Super Basketball"
+                },
+                "rootfolder": "jtsbaskt"
+            },
+            "jotego.jtsectnz": {
+                "expectedNewJSONs": 7,
+                "jsonList": {
+                    "Legendary Wings (US set 1)": "Legendary Wings",
+                    "Section Z (set 1)": "Section Z"
+                },
+                "rootfolder": "jtsectnz"
+            },
+            "jotego.jtsf": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "Street Fighter (World) (protected)": "Street Fighter"
+                },
+                "rootfolder": "jtsf"
+            },
+            "jotego.jtshanon": {
+                "expectedNewJSONs": 6,
+                "jsonList": {
+                    "Limited Edition Hang-On": "Super Hang-On (Limited Edition)",
+                    "Super Hang-On (mini ride-on) (FD1089B 317-0034)": "Super Hang-On"
+                },
+                "rootfolder": "jtshanon"
+            },
+            "jotego.jtshouse": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Splatter House (World, new version (SH3))": "Splatterhouse"
+                },
+                "rootfolder": "jtshouse"
+            },
+            "jotego.jtsimson": {
+                "expectedNewJSONs": 9,
+                "jsonList": {
+                    "The Simpsons (4 Players World, set 1)": "The Simpsons"
+                },
+                "rootfolder": "jtsimson"
+            },
+            "jotego.jttmnt": {
+                "expectedNewJSONs": 20,
+                "jsonList": {
+                    "M.I.A. - Missing in Action (version S)": "M.I.A.",
+                    "Punk Shot (US 4 Players)": "Punk Shot",
+                    "Teenage Mutant Ninja Turtles (World 4 Players, version X)": "Teenage Mutant Ninja Turtles"
+                },
+                "rootfolder": "jttmnt"
+            },
+            "jotego.jttora": {
+                "expectedNewJSONs": 4,
+                "jsonList": {
+                    "F-1 Dream": "F-1 Dream",
+                    "Tiger Road (US)": "Tiger Road"
+                },
+                "rootfolder": "jttora"
+            },
+            "jotego.jttrack": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Track & Field": "Track & Field"
+                },
+                "rootfolder": "jttrack"
+            },
+            "jotego.jttrojan": {
+                "expectedNewJSONs": 5,
+                "jsonList": {
+                    "Trojan (Romstar)": "Trojan"
+                },
+                "rootfolder": "jttrojan"
+            },
+            "jotego.jtvigil": {
+                "expectedNewJSONs": 7,
+                "jsonList": {
+                    "Vigilante (World, Rev E)": "Vigilante"
+                },
+                "rootfolder": "jtvigil"
+            },
+            "jotego.jtvulgus": {
+                "expectedNewJSONs": 3,
+                "jsonList": {
+                    "Vulgus (set 1)": "Vulgus"
+                },
+                "rootfolder": "jtvulgus"
+            },
+            "jotego.jtyiear": {
+                "expectedNewJSONs": 2,
+                "jsonList": {
+                    "Yie Ar Kung-Fu (program code I)": "Yie Ar Kung-Fu"
+                },
+                "rootfolder": "jtyiear"
+            },
+            "nullobject.tecmo": {
+                "expectedNewJSONs": 7,
+                "jsonList": {
+                    "Gemini Wing (World)": "Gemini Wing",
+                    "Rygar (US set 1)": "Rygar",
+                    "Silkworm (World)": "Silkworm"
+                },
+                "rootfolder": "tecmo"
+            },
+            "pram0d.bakraid": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "bbakraid": "Battle Bakraid"
+                },
+                "rootfolder": "bakraid"
+            },
+            "pram0d.batrider": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "batrider": "Armed Police Batrider"
+                },
+                "rootfolder": "batrider"
+            },
+            "pram0d.garegga": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "garegga": "Battle Garegga"
+                },
+                "rootfolder": "garegga"
+            },
+            "pram0d.kingdmgp": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "kingdmgp": "Kingdom Grand Prix"
+                },
+                "rootfolder": "kingdmgp"
+            },
+            "pram0d.snowbros2": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "snowbros2": "Snow Bros. 2"
+                },
+                "rootfolder": "snowbros2"
+            },
+            "pram0d.sstriker": {
+                "expectedNewJSONs": 1,
+                "jsonList": {
+                    "sstriker": "Sorcer Striker"
+                },
+                "rootfolder": "sstriker"
+            }
+        },
+        "possibleSubdirectories": [
+            "",
+            "_alternatives/"
+        ],
+        "skip": [
+            "Mazamars312.PC Engine CD"
+        ],
+        "versionList": {
+            "Mazamars312.Amiga": "0",
+            "Mazamars312.NeoGeo": "0",
+            "Mazamars312.NeoGeo_Overdrive": "0",
+            "Mazamars312.PC Engine CD": "0",
+            "RndMnkIII.alphamission": "0",
+            "Spacemen3.PDP1": "0",
+            "Spiritualized.2600": "0",
+            "Spiritualized.7800": "0",
+            "Spiritualized.Adventurevision": "0",
+            "Spiritualized.Arcadia": "0",
+            "Spiritualized.ChannelF": "0",
+            "Spiritualized.Coleco": "0",
+            "Spiritualized.Creativision": "0",
+            "Spiritualized.GB": "0",
+            "Spiritualized.GBA": "0",
+            "Spiritualized.GBC": "0",
+            "Spiritualized.GG": "0",
+            "Spiritualized.Gamate": "0",
+            "Spiritualized.Gameking": "0",
+            "Spiritualized.Genesis": "0",
+            "Spiritualized.Intv": "0",
+            "Spiritualized.Megaduck": "0",
+            "Spiritualized.NES": "0",
+            "Spiritualized.Odyssey2": "0",
+            "Spiritualized.SG-1000": "0",
+            "Spiritualized.SMS": "0",
+            "Spiritualized.Studio2": "0",
+            "Spiritualized.SuperGB": "0",
+            "Spiritualized.SuperGB2": "0",
+            "Spiritualized.SuperGB2-VW": "0",
+            "Spiritualized.Supervision": "0",
+            "Spiritualized.VideoBrain": "0",
+            "agg23.Arduboy": "0",
+            "agg23.GameAndWatch": "0",
+            "agg23.NES": "0",
+            "agg23.PC Engine": "0",
+            "agg23.PokemonMini": "0",
+            "agg23.Pong": "0",
+            "agg23.SNES": "0",
+            "agg23.Tamagotchi_P1": "0",
+            "agg23.WonderSwan": "0",
+            "antongale.exerion": "0",
+            "antongale.performan": "0",
+            "antongale.slapfight": "0",
+            "antongale.taitosj": "0",
+            "atrac17.pipibibs": "0",
+            "atrac17.truxton2": "0",
+            "boogermann.bankpanic": "0",
+            "boogermann.congo": "0",
+            "boogermann.digdug": "0",
+            "boogermann.galaga": "0",
+            "boogermann.gberet": "0",
+            "boogermann.pooyan": "0",
+            "boogermann.supervision": "0",
+            "boogermann.xevious": "0",
+            "ericlewis.Asteroids": "0",
+            "ericlewis.Dominos": "0",
+            "ericlewis.DonkeyKong": "0",
+            "ericlewis.Genesis": "0",
+            "ericlewis.LunarLander": "0",
+            "ericlewis.QBert": "0",
+            "ericlewis.RadarScope": "0",
+            "ericlewis.SpaceRace": "0",
+            "ericlewis.SuperBreakout": "0",
+            "jotego.jtaliens": "0",
+            "jotego.jtbtiger": "0",
+            "jotego.jtbubl": "0",
+            "jotego.jtcastle": "0",
+            "jotego.jtcomsc": "0",
+            "jotego.jtcontra": "0",
+            "jotego.jtcop": "0",
+            "jotego.jtcps1": "0",
+            "jotego.jtcps15": "0",
+            "jotego.jtcps2": "0",
+            "jotego.jtdd": "0",
+            "jotego.jtdd2": "0",
+            "jotego.jtexed": "0",
+            "jotego.jtfround": "0",
+            "jotego.jtgng": "0",
+            "jotego.jtgunsmk": "0",
+            "jotego.jtkarnov": "0",
+            "jotego.jtkicker": "0",
+            "jotego.jtkiwi": "0",
+            "jotego.jtkunio": "0",
+            "jotego.jtmikie": "0",
+            "jotego.jtninja": "0",
+            "jotego.jtoutrun": "0",
+            "jotego.jtpang": "0",
+            "jotego.jtpinpon": "0",
+            "jotego.jtrastan": "0",
+            "jotego.jtroadf": "0",
+            "jotego.jtroc": "0",
+            "jotego.jts16": "0",
+            "jotego.jts16b": "0",
+            "jotego.jtsarms": "0",
+            "jotego.jtsbaskt": "0",
+            "jotego.jtsectnz": "0",
+            "jotego.jtsf": "0",
+            "jotego.jtshanon": "0",
+            "jotego.jtshouse": "0",
+            "jotego.jtsimson": "0",
+            "jotego.jttmnt": "0",
+            "jotego.jttora": "0",
+            "jotego.jttrack": "0",
+            "jotego.jttrojan": "0",
+            "jotego.jttwin16": "0",
+            "jotego.jtvigil": "0",
+            "jotego.jtvulgus": "0",
+            "jotego.jtyiear": "0",
+            "nullobject.tecmo": "0",
+            "pram0d.bakraid": "0",
+            "pram0d.batrider": "0",
+            "pram0d.garegga": "0",
+            "pram0d.kingdmgp": "0",
+            "pram0d.snowbros2": "0",
+            "pram0d.sstriker": "0",
+            "somhi.flappybird": "0"
+        }
+    },
+    "cloneData": {
+        "skip": [
+            "jotego.jtcps2",
+            "jotego.jtcps15",
+            "jotego.jtcps1",
+            "Mazamars312.NeoGeo",
+            "Mazamars312.NeoGeo_Overdrive"
+        ]
+    },
+    "favouriteData": {
+        "categoryName": "",
+        "cores": {
+        }
+    },
+    "platformFixData": {
+        "acceptedCategories": [
+            "Arcade",
+            "Handheld",
+            "Console",
+            "Computer",
+            "Other"
+        ],
+        "unacceptedCategories": [
+            "Arcade compatible"
+        ]
+    },
+    "platformRenameData": {
+        "jotego.jtcps1": "cps1",
+        "jotego.jtcps15": "cps15",
+        "jotego.jtcps2": "cps2"
+    },
+    "programSettings": {
+        "altcores": true,
+        "autostart": true,
+        "clean": true,
+        "clone": true,
+        "favourites": true,
+        "aspect": true,
+        "platforms": true,
+        "rename": true
+    }
+}
