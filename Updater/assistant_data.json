@@ -1,6 +1,5 @@
 {
-    "altCoreData": {
-    },
+    "altCoreData": {},
     "aspectData": {
         "rotateBy180": [
             "Elevator Action",
@@ -42,46 +41,6 @@
             "High Way Race"
         ],
         "useCustomRatio": {
-            "Spiritualized.7800": [
-                {
-                    "aspect_h": 21,
-                    "aspect_w": 25,
-                    "height": 224,
-                    "width": 320
-                }
-            ],
-            "Spiritualized.Arcadia": [
-                {
-                    "aspect_h": 108,
-                    "aspect_w": 128,
-                    "height": 216,
-                    "width": 128
-                }
-            ],
-            "Spiritualized.ChannelF": [
-                {
-                    "aspect_h": 234,
-                    "aspect_w": 400,
-                    "height": 234,
-                    "width": 100
-                }
-            ],
-            "Spiritualized.GG": [
-                {
-                    "aspect_h": 63,
-                    "aspect_w": 80,
-                    "height": 144,
-                    "width": 160
-                }
-            ],
-            "Spiritualized.SMS": [
-                {
-                    "aspect_h": 5,
-                    "aspect_w": 8,
-                    "height": 192,
-                    "width": 256
-                }
-            ],
             "agg23.PC Engine": [
                 {
                     "aspect_h": 240,
@@ -95,14 +54,6 @@
                     "height": 224,
                     "width": 512
                 }
-            ],
-            "jotego.jtcps2": [
-                {
-                    "aspect_h": 133,
-                    "aspect_w": 176,
-                    "height": 224,
-                    "width": 384
-                }
             ]
         },
         "useOriginalRatio": [
@@ -113,19 +64,14 @@
             "Mazamars312.Amiga",
             "ericlewis.SuperBreakout",
             "jotego.jtcps1",
-            "jotego.jtcps15"
+            "jotego.jtcps15",
+            "Spiritualized.7800","Spiritualized.Arcadia", "jotego.jtcps2", "Spiritualized.ChannelF", "Spiritualized.GG", "Spiritualized.SMS"
         ]
     },
     "autostartData": {
         "skip": [
             "Silkworm",
             "Super Xevious",
-            "Alpine Ski",
-            "High Way Race",
-            "Jungle King",
-            "Pirate Pete",
-            "Space Seeker",
-            "Wild Western",
             "Gemini Wing"
         ]
     },
@@ -395,7 +341,6 @@
                     "Dynasty Wars (USA, B-Board 89624B-)": "Dynasty Wars",
                     "Final Fight (World, set 1)": "Final Fight",
                     "Forgotten Worlds (World)": "Forgotten Worlds",
-                    "Ganbare! Marine Kun (Japan 2K0411)": "Ganbare! Marine Kun",
                     "Ghouls'n Ghosts (World)": "Ghouls'n Ghosts",
                     "Gulun.Pa! (Japan 931220 L) (prototype)": "Gulun.Pa!",
                     "Knights of the Round (World 911127)": "Knights of the Round",
@@ -960,8 +905,7 @@
     },
     "favouriteData": {
         "categoryName": "",
-        "cores": {
-        }
+        "cores": {}
     },
     "platformFixData": {
         "acceptedCategories": [
@@ -969,7 +913,7 @@
             "Handheld",
             "Console",
             "Computer",
-            "Other"
+            "Others"
         ],
         "unacceptedCategories": [
             "Arcade compatible"
@@ -982,11 +926,11 @@
     },
     "programSettings": {
         "altcores": true,
+        "aspect": true,
         "autostart": true,
         "clean": true,
         "clone": true,
         "favourites": true,
-        "aspect": true,
         "platforms": true,
         "rename": true
     }

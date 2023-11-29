@@ -601,7 +601,7 @@ def integer_scale():
 #AUTOSTART CORES
 def autostart_cores():
     for x in listdir("../Cores"):
-        if isdir("../Cores/" + x):
+        if isdir("../Cores/" + x): #check core exists
             system("cls")
             print("Autostarting cores...\n\t" + x)
 
@@ -655,58 +655,59 @@ def rename_core_platforms():
     for x in assistantData.dictionary["platformRenameData"].keys(): #For each core in renamePlatformDict...
         system("cls")
         print("Renaming core platforms...\n\t" + x)
-    
-        coreJSON = OpenJSON("../Cores/" + x + "/core.json")
         
-        #If it's not already been renamed, then...
-        if not coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] == assistantData.dictionary["platformRenameData"][x]:
+        if isdir("../Cores/" + x): #check the core exists
+            coreJSON = OpenJSON("../Cores/" + x + "/core.json")
             
-            #This is the old platform name
-            oldPlatform = coreJSON.dictionary["core"]["metadata"]["platform_ids"][0]
-            
-            #Rename the platform ID in the core data
-            coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] = assistantData.dictionary["platformRenameData"][x]
-            coreJSON.save()
-                        
-            for y in listdir("../Cores/"):
-                if isdir("../Cores/" + y):
-                    coreJSON = OpenJSON("../Cores/" + y + "/core.json")
-                    #If another core has the same platform as what this core used to have...
-                    if coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] == oldPlatform:
-                        #Then we take care to only move this core's data over to the new platform.
-                        if exists("../Assets/" + oldPlatform + "/" + x):
-                            mergetree("../Assets/" + oldPlatform + "/" + x, "../Assets/" + assistantData.dictionary["platformRenameData"][x] + "/" + x)
-                            rmtree("../Assets/" + oldPlatform + "/" + x)
-                            break
+            #If it's not already been renamed, then...
+            if not coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] == assistantData.dictionary["platformRenameData"][x]:
+                
+                #This is the old platform name
+                oldPlatform = coreJSON.dictionary["core"]["metadata"]["platform_ids"][0]
+                
+                #Rename the platform ID in the core data
+                coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] = assistantData.dictionary["platformRenameData"][x]
+                coreJSON.save()
                             
-            # If there's still a directory for this core in the old platform's asset folder at this stage, that means this is the only core with this platform.
-            if isdir("../Assets/" + oldPlatform + "/" + x):
-                # So we destroy all trace of the old platform!!!
-                
-                # Move the assets folder over to the new platform
-                mergetree("../Assets/" + oldPlatform, "../Assets/" + assistantData.dictionary["platformRenameData"][x])
-                rmtree("../Assets/" + oldPlatform)
-                
-                # Rename the old platform data to the new platform, or delete it if we've already got stuff for the new platform
-                if exists("../Platforms/" + oldPlatform + ".json") and not exists("../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json"):
-                    rename("../Platforms/" + oldPlatform + ".json", "../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json")
-                elif exists("../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json"):
-                    remove("../Platforms/" + oldPlatform + ".json")
-                
-                # Same with the platform image
-                if exists("../Platforms/_images/" + oldPlatform + ".bin") and not exists("../Platforms/_images/" + assistantData.dictionary["platformRenameData"][x] + ".bin"):
-                    rename("../Platforms/_images/" + oldPlatform + ".bin", "../Platforms/_images/" + assistantData.dictionary["platformRenameData"][x] + ".bin")
-                
-                # Deal with Presets folder
-                if exists("../Presets/" + x + "/Input/" + oldPlatform):
-                    mergetree("../Presets/" + x + "/Input/" + oldPlatform, "../Presets/" + x + "/Input/" + assistantData.dictionary["platformRenameData"][x])
-                if exists("../Presets/" + x + "/Interact/" + oldPlatform):
-                    mergetree("../Presets/" + x + "/Interact/" + oldPlatform, "../Presets/" + x + "/Interact/" + assistantData.dictionary["platformRenameData"][x])
-                
-                # Finally, if we have asset cleaning turned on, then also replace all instances of the old platform with the new one!
-                for y in assistantData.dictionary["cleanData"]["cores"].keys():
-                    if assistantData.dictionary["cleanData"]["cores"][y]["rootfolder"] == oldPlatform:
-                        assistantData.dictionary["cleanData"]["cores"][y]["rootfolder"] = assistantData.dictionary["platformRenameData"][x]
+                for y in listdir("../Cores/"):
+                    if isdir("../Cores/" + y):
+                        coreJSON = OpenJSON("../Cores/" + y + "/core.json")
+                        #If another core has the same platform as what this core used to have...
+                        if coreJSON.dictionary["core"]["metadata"]["platform_ids"][0] == oldPlatform:
+                            #Then we take care to only move this core's data over to the new platform.
+                            if exists("../Assets/" + oldPlatform + "/" + x):
+                                mergetree("../Assets/" + oldPlatform + "/" + x, "../Assets/" + assistantData.dictionary["platformRenameData"][x] + "/" + x)
+                                rmtree("../Assets/" + oldPlatform + "/" + x)
+                                break
+                                
+                # If there's still a directory for this core in the old platform's asset folder at this stage, that means this is the only core with this platform.
+                if isdir("../Assets/" + oldPlatform + "/" + x):
+                    # So we destroy all trace of the old platform!!!
+                    
+                    # Move the assets folder over to the new platform
+                    mergetree("../Assets/" + oldPlatform, "../Assets/" + assistantData.dictionary["platformRenameData"][x])
+                    rmtree("../Assets/" + oldPlatform)
+                    
+                    # Rename the old platform data to the new platform, or delete it if we've already got stuff for the new platform
+                    if exists("../Platforms/" + oldPlatform + ".json") and not exists("../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json"):
+                        rename("../Platforms/" + oldPlatform + ".json", "../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json")
+                    elif exists("../Platforms/" + assistantData.dictionary["platformRenameData"][x] + ".json"):
+                        remove("../Platforms/" + oldPlatform + ".json")
+                    
+                    # Same with the platform image
+                    if exists("../Platforms/_images/" + oldPlatform + ".bin") and not exists("../Platforms/_images/" + assistantData.dictionary["platformRenameData"][x] + ".bin"):
+                        rename("../Platforms/_images/" + oldPlatform + ".bin", "../Platforms/_images/" + assistantData.dictionary["platformRenameData"][x] + ".bin")
+                    
+                    # Deal with Presets folder
+                    if exists("../Presets/" + x + "/Input/" + oldPlatform):
+                        mergetree("../Presets/" + x + "/Input/" + oldPlatform, "../Presets/" + x + "/Input/" + assistantData.dictionary["platformRenameData"][x])
+                    if exists("../Presets/" + x + "/Interact/" + oldPlatform):
+                        mergetree("../Presets/" + x + "/Interact/" + oldPlatform, "../Presets/" + x + "/Interact/" + assistantData.dictionary["platformRenameData"][x])
+                    
+                    # Finally, if we have asset cleaning turned on, then also replace all instances of the old platform with the new one!
+                    for y in assistantData.dictionary["cleanData"]["cores"].keys():
+                        if assistantData.dictionary["cleanData"]["cores"][y]["rootfolder"] == oldPlatform:
+                            assistantData.dictionary["cleanData"]["cores"][y]["rootfolder"] = assistantData.dictionary["platformRenameData"][x]
 
 #CREATE FAVOURITE CORES
 def create_favourite_cores():
@@ -716,72 +717,73 @@ def create_favourite_cores():
     
     #For each entry in the list of favourite games...
     for x in assistantData.dictionary["favouriteData"]["cores"].keys():
-        system("cls")
-        print("Creating favourite cores...\n\tfaves." + x)
-        
-        #Check for the scenario where the favourite core exists already, AND is based on a core that has since been updated, and then remove the core so it can be remade
-        if isdir("../Cores/faves." + x):
-            if compare_core_release(assistantData.dictionary["favouriteData"]["cores"][x][0], "faves." + x):
-                rmtree("../Cores/faves." + x)
-        
-        #We now open the base core JSON, to get information on where the asset would be
-        originalCoreJSON = OpenJSON("../Cores/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/core.json")
-        if len(assistantData.dictionary["favouriteData"]["cores"][x][1]) > 31: #Filenames for the AP must be less than 32 characters long - so we don't try and make the core if it's longer than that
-            print("You've listed " + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + " as a favourite game! Unfortunately, its filename is too long to be autostarted by the Pocket. Please rename it so the full filename, including extension, is 31 characters or less! And don't forget to do the same to any save data and the assistant_data.json :)")
-        elif not isdir("../Cores/faves." + x) and isfile("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1]):
+        if isdir("../Cores/" + assistantData.dictionary["favouriteData"]["cores"][x]): #check the core actually exists
+            system("cls")
+            print("Creating favourite cores...\n\tfaves." + x)
             
-            #We're now making the favourite core from scratch - so make the image, download any assets with pocket_updater.exe, and copy the core's directory itself over
-            make_image(assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")])
-            copy("../Updater/_assistantimages/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".bin", "../Platforms/_images/" + x + ".bin")
-            system("pocket_updater.exe assets -p ../ -c " + assistantData.dictionary["favouriteData"]["cores"][x][0])
-            copytree("../Cores/" + assistantData.dictionary["favouriteData"]["cores"][x][0], "../Cores/faves." + x)
+            #Check for the scenario where the favourite core exists already, AND is based on a core that has since been updated, and then remove the core so it can be remade
+            if isdir("../Cores/faves." + x):
+                if compare_core_release(assistantData.dictionary["favouriteData"]["cores"][x][0], "faves." + x):
+                    rmtree("../Cores/faves." + x)
             
-            #Now we set up the core JSON file
-            coreJSON = OpenJSON("../Cores/faves." + x + "/core.json")
-            coreJSON.dictionary["core"]["metadata"]["platform_ids"].append(x) #This means the fave-core will have its original platform ID first, which means when we autostart it from its individual platform ID, it loads the assets from the original folder - basically meaning the save data is preserved
-            coreJSON.dictionary["core"]["metadata"]["author"] = "faves"
-            coreJSON.dictionary["core"]["metadata"]["shortname"] = x
-            coreJSON.save()
+            #We now open the base core JSON, to get information on where the asset would be
+            originalCoreJSON = OpenJSON("../Cores/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/core.json")
+            if len(assistantData.dictionary["favouriteData"]["cores"][x][1]) > 31: #Filenames for the AP must be less than 32 characters long - so we don't try and make the core if it's longer than that
+                print("You've listed " + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + " as a favourite game! Unfortunately, its filename is too long to be autostarted by the Pocket. Please rename it so the full filename, including extension, is 31 characters or less! And don't forget to do the same to any save data and the assistant_data.json :)")
+            elif not isdir("../Cores/faves." + x) and isfile("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1]):
+                
+                #We're now making the favourite core from scratch - so make the image, download any assets with pocket_updater.exe, and copy the core's directory itself over
+                make_image(assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")])
+                copy("../Updater/_assistantimages/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".bin", "../Platforms/_images/" + x + ".bin")
+                system("pocket_updater.exe assets -p ../ -c " + assistantData.dictionary["favouriteData"]["cores"][x][0])
+                copytree("../Cores/" + assistantData.dictionary["favouriteData"]["cores"][x][0], "../Cores/faves." + x)
+                
+                #Now we set up the core JSON file
+                coreJSON = OpenJSON("../Cores/faves." + x + "/core.json")
+                coreJSON.dictionary["core"]["metadata"]["platform_ids"].append(x) #This means the fave-core will have its original platform ID first, which means when we autostart it from its individual platform ID, it loads the assets from the original folder - basically meaning the save data is preserved
+                coreJSON.dictionary["core"]["metadata"]["author"] = "faves"
+                coreJSON.dictionary["core"]["metadata"]["shortname"] = x
+                coreJSON.save()
 
-            #Next, the data JSON file.
-            dataJSON = OpenJSON("../Cores/faves." + x + "/data.json")
-            for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
-                #Check through the data slots of the original core to see if there were any required files then (e.g. bios). If so, make a folder for the fave-core if necessary and copy over the old files.
-                if "filename" in dataJSON.dictionary["data"]["data_slots"][y].keys():
-                    if isdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0]) and not isdir("../Assets/" + originalCoreJSON["core"]["metadata"]["platform_ids"][0] + "/faves." + x):
-                        mkdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/faves." + x)
-                    if isdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0]):
-                        copy("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/" + dataJSON.dictionary["data"]["data_slots"][y]["filename"],"../Assets/" + originalCoreJSON["core"]["metadata"]["platform_ids"][0] + "/faves." + x + "/" + dataJSON.dictionary["data"]["data_slots"][y]["filename"])
-            for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
-                #If there was previously a JSON file to load (for e.g. arcade games), we remove it from the data slot list (because we're now loading the rom directly anyway)
-                if "json" in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
-                    dataJSON.dictionary["data"]["data_slots"] = dataJSON.dictionary["data"]["data_slots"][0:y] + dataJSON.dictionary["data"]["data_slots"][y+1:]
-                    break
-            for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
-                #Next, check for the data slot that accepts the file extension of the provided rom for this favourite core, and set the filename to that provided rom
-                if assistantData.dictionary["favouriteData"]["cores"][x][1][assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")+1:] in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
-                    dataJSON.dictionary["data"]["data_slots"][y]["filename"] = assistantData.dictionary["favouriteData"]["cores"][x][1]
-            if isdir("../Saves/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0]):
-                #If there's save data for the favourited game, then we also provide the save data slot with the corresponding save filename
+                #Next, the data JSON file.
+                dataJSON = OpenJSON("../Cores/faves." + x + "/data.json")
                 for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
-                    if "sav" in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
-                        dataJSON.dictionary["data"]["data_slots"][y]["filename"] = assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".sav"
-            #Finally, if there is a Presets folder attached to the original game and core, then copy that to this core too
-            if exists("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Input/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".json"):
-                copy("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Input/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1],"../Cores/faves." + x + "/input.json")
-            if exists("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Interact/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".json"):
-                copy("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Interact/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1],"../Cores/faves." + x + "/interact.json")
-            dataJSON.save()
-            
-            #And also make platform data if there's not data there already!
-            if not exists("../Platforms/" + x + ".json"):
-                platformJSON = {"platform": make_platform_data(assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")],assistantData.dictionary["favouriteData"]["categoryName"])}
-                a = open("../Platforms/" + x + ".json","w")
-                json.dump(platformJSON, a, indent = 4)
-                a.close()
-            
-            #Since we've already downloaded the assets, we don't need to do it every time we run pocket_updater
-            dont_download_assets("faves." + x)
+                    #Check through the data slots of the original core to see if there were any required files then (e.g. bios). If so, make a folder for the fave-core if necessary and copy over the old files.
+                    if "filename" in dataJSON.dictionary["data"]["data_slots"][y].keys():
+                        if isdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0]) and not isdir("../Assets/" + originalCoreJSON["core"]["metadata"]["platform_ids"][0] + "/faves." + x):
+                            mkdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/faves." + x)
+                        if isdir("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0]):
+                            copy("../Assets/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/" + dataJSON.dictionary["data"]["data_slots"][y]["filename"],"../Assets/" + originalCoreJSON["core"]["metadata"]["platform_ids"][0] + "/faves." + x + "/" + dataJSON.dictionary["data"]["data_slots"][y]["filename"])
+                for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
+                    #If there was previously a JSON file to load (for e.g. arcade games), we remove it from the data slot list (because we're now loading the rom directly anyway)
+                    if "json" in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
+                        dataJSON.dictionary["data"]["data_slots"] = dataJSON.dictionary["data"]["data_slots"][0:y] + dataJSON.dictionary["data"]["data_slots"][y+1:]
+                        break
+                for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
+                    #Next, check for the data slot that accepts the file extension of the provided rom for this favourite core, and set the filename to that provided rom
+                    if assistantData.dictionary["favouriteData"]["cores"][x][1][assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")+1:] in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
+                        dataJSON.dictionary["data"]["data_slots"][y]["filename"] = assistantData.dictionary["favouriteData"]["cores"][x][1]
+                if isdir("../Saves/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0]):
+                    #If there's save data for the favourited game, then we also provide the save data slot with the corresponding save filename
+                    for y in range(len(dataJSON.dictionary["data"]["data_slots"])):
+                        if "sav" in dataJSON.dictionary["data"]["data_slots"][y]["extensions"]:
+                            dataJSON.dictionary["data"]["data_slots"][y]["filename"] = assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".sav"
+                #Finally, if there is a Presets folder attached to the original game and core, then copy that to this core too
+                if exists("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Input/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".json"):
+                    copy("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Input/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1],"../Cores/faves." + x + "/input.json")
+                if exists("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Interact/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")] + ".json"):
+                    copy("../Presets/" + assistantData.dictionary["favouriteData"]["cores"][x][0] + "/Interact/" + originalCoreJSON.dictionary["core"]["metadata"]["platform_ids"][0] + "/common/" + assistantData.dictionary["favouriteData"]["cores"][x][1],"../Cores/faves." + x + "/interact.json")
+                dataJSON.save()
+                
+                #And also make platform data if there's not data there already!
+                if not exists("../Platforms/" + x + ".json"):
+                    platformJSON = {"platform": make_platform_data(assistantData.dictionary["favouriteData"]["cores"][x][1][0:assistantData.dictionary["favouriteData"]["cores"][x][1].rfind(".")],assistantData.dictionary["favouriteData"]["categoryName"])}
+                    a = open("../Platforms/" + x + ".json","w")
+                    json.dump(platformJSON, a, indent = 4)
+                    a.close()
+                
+                #Since we've already downloaded the assets, we don't need to do it every time we run pocket_updater
+                dont_download_assets("faves." + x)
 
 #CREATE ALT CORES
 def create_alt_cores():
@@ -793,7 +795,7 @@ def create_alt_cores():
         if isdir("../Cores/" + x):
             if compare_core_release(assistantData.dictionary["altCoreData"][x],x):
                 rmtree("../Cores/" + x)
-        if not isdir("../Cores/" + x):
+        if not isdir("../Cores/" + x) and isdir("../Cores/" + assistantData.dictionary["altCoreData"][x]):
             #Copy the core over
             copytree("../Cores/" + assistantData.dictionary["altCoreData"][x], "../Cores/" + x)
             coreJSON = OpenJSON("../Cores/" + x + "/core.json")
